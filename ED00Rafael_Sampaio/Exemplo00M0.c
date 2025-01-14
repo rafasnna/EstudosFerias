@@ -180,6 +180,9 @@ do
     printf("\n%s","8 - Metodo 08");
     printf("\n%s","9 - Metodo 09");
     printf("\n%s","10 - Metodo 10");
+    printf("\n%s","11 - Metodo 11");
+    printf("\n%s", "12 - Metodo 12");
+    printf ("\n%s", "13 - Metodo 13");
     printf("\n");
 
     //ler opcoes do teclado
@@ -224,6 +227,15 @@ do
         break;
         case 10:
         ten();
+        break;
+        case 11:
+        eleven();
+        break;
+        case 12:
+        twelve();
+        break;
+        case 13:
+        thirteen();
         break;
 
     
