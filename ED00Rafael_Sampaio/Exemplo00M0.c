@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #define PI 3.14 // definicao de macro (nome para substituir valor)
 
 void one (void)
 {
-    printf ( "- EXEMPLO101 - PRIMEIRO EXEMPLO EM C" );
+    printf ( " 1 - PRIMEIRO EXEMPLO EM C" );
     printf ( "\nPRESSIONAR <Enter> PARA TERMINAR." );
     getchar ( ); // para esperar
 } // fim do programa
@@ -14,7 +15,7 @@ void two (void)
     system ("cls"); // limpar a tela
     //system ("clear"); // limpar a tela no Linux
 
-    printf ( "- EXEMPLO102 - SEGUNDO EXEMPLO EM C\n" );
+    printf ( " 2 - SEGUNDO EXEMPLO EM C\n" );
     system ("pause"); // (Windows) para esperar
     // getchar ( ); // para esperar (Linux)
 
@@ -24,7 +25,7 @@ void tree (void){
 
     system("cls"); // limpar a tela no Windows
 // system("clear"); // limpar a tela no Linux
-    printf ( "EXEMPLO103 - TERCEIRO EXEMPLO EM C" );
+    printf ( " 3 - TERCEIRO EXEMPLO EM C" );
     printf ( "\n" ); // para mudar de linha
     printf ( "MATRICULA: 866307 ALUNO : Rafael Sampaio" );
     printf ( "\nPRESSIONAR <Enter> PARA TERMINAR." );
@@ -33,7 +34,7 @@ void tree (void){
 } // fim do programa
 
 void four (void){
-    printf ( "EXEMPLO104 - PRIMEIRO EXEMPLO EM C" );
+    printf ( " 4 - PRIMEIRO EXEMPLO EM C" );
     printf ( "\n" ); // para mudar de linha (="\n")
     printf ( "MATRICULA: ______ ALUNO : __________________" );
     printf ( "\n" ); // para mudar de linha
@@ -43,7 +44,7 @@ void four (void){
 
 void five (void)
 {
-    printf ( "EXEMPLO105 - PRIMEIRO EXEMPLO EM C" );
+    printf ( " 5 - PRIMEIRO EXEMPLO EM C" );
     printf ( "\nMATRICULA: ______ ALUNO : __________________" );
     printf ( "\nEXEMPLOS DE VALORES : " );
     printf ( "\nCARACTERE : %c", 'A' ); // letra ou simbolo
@@ -54,7 +55,7 @@ void five (void)
 }
 void six (void){
  
-    printf ( "EXEMPLO106 - PRIMEIRO EXEMPLO EM C " );
+    printf ( " 6 - PRIMEIRO EXEMPLO EM C " );
     printf ( "\nMATRICULA: ______ ALUNO : __________________" );
     printf ( "\nEXEMPLOS DE VALORES : " );
     printf ( "\nCARACTERE : %c", 'A' ); // letra ou simbolo
@@ -67,7 +68,7 @@ void six (void){
 void seven (void)
 {// definicao de constante
 const float LOCAL_PI = 3.14; // com nome e tipo (melhor)
-    printf ( "EXEMPLO107 - PRIMEIRO EXEMPLO EM C" );
+    printf ( " 7 - PRIMEIRO EXEMPLO EM C" );
     printf ( "\nMATRICULA: ______ ALUNO : __________________" );
     printf ( "\nEXEMPLOS DE VALORES : " );
     printf ( "\nCARACTERE : %c", 'A' ); // letra ou simbolo
@@ -82,7 +83,7 @@ void eight (void)
 const float LOCAL_PI = 3.14; // com nome e tipo (melhor)
 // definicao de variavel real
 float X = 10.01; // com atribuicao de valor inicial
-    printf ( "EXEMPLO108 - PRIMEIRO EXEMPLO EM C" );
+    printf ( " 8 - PRIMEIRO EXEMPLO EM C" );
     printf ( "\nMATRICULA: ______ ALUNO : __________________" );
     printf ( "\nEXEMPLOS DE VALORES : " );
     printf ( "\nCARACTERE : %c", 'A' ); // letra ou simbolo
@@ -97,7 +98,7 @@ void nine (void){
     const float LOCAL_PI = 3.14;
     float X = 10.01;
     int I = 10;
-    printf ( "EXEMPLO109 - PRIMEIRO EXEMPLO EM C" );
+    printf ( " 9 - PRIMEIRO EXEMPLO EM C" );
     printf ( "\nMATRICULA: ______ ALUNO : __________________" ); 
     printf ( "\nEXEMPLOS DE VALORES : " );
     printf ("\nINTEIRO : %i", I );
@@ -113,7 +114,7 @@ void ten (void)
     float X = 10.01;
     int I = 10;
     char* N = "\n";
-    printf (" Exemplo em C numero 10 ");
+    printf ("  10 - PRIMEIRO EXEMPLO EM C");
     printf ("\nMATRICULA: ______ ALUNO : ____________");
     printf ("%c%s",    N,  "Exemplos de valores:");
     printf ("%c%s%i",  I,  "INTEIRO: ", I);
@@ -126,7 +127,7 @@ void eleven(void){
 
 //Progama para ler e imprimir um valor inteiro
 int X = 0;
-printf("Atividade 11 - Ler e imprimir um valor inteiro\n");
+printf(" 11 - Ler e imprimir um valor inteiro\n");
 printf("Me dê um valor inteiro qualquer:");
 scanf("%d, &X");
 getchar();
@@ -140,7 +141,7 @@ void twelve(void){
 //Programa para ler e imprimir um valor real
 int X = 0.0;
 
-printf("Atividade 12 - Ler e imprimir um valor real\n");
+printf(" 12 - Ler e imprimir um valor real\n");
 printf("Me dê um valor real qualquer:");  
 scanf("%lf", &X); 
 getchar();
@@ -152,7 +153,90 @@ getchar();
 
 void thirteen(void){
 
+char X = 0;
 
+printf (" 13 - Atividade de leitura e impressao do caractere");
+printf ("Qualquer caractere:");
+scanf("%c", &X);
+getchar();
+printf ("\n O Valor digitado foi: %c", X);
+printf("\n Pressione <enter> para finalizar o programa");
+getchar();
+
+}
+
+void fourteen (void){
+
+char X [10];
+
+printf (" 14 - Ler e imprimir , no maximo 9 caracteres");
+printf ("digite no maximo, 9 caracteres quaisquer:");
+scanf ("%s", X);
+getchar();
+
+}
+
+void fifiteen (void){
+
+int X=0, Y=0, Z=0;
+
+printf ("\n15 - Ler e Somar dois valores inteiros");
+printf ("Forneca um valor inteiro qualquer:");
+scanf("%d", &X);
+getchar();
+printf ("Forneca agora outro valor inteiro:");
+scanf("%d", Y);
+getchar();
+Z = X + Y;
+printf ("A soma dos valores fornecidos é = %d", Z);
+printf (" Pressione <ENTER> para finalizar");
+getchar();
+}
+
+void sixteen (void){
+
+float X=0.0, Y=0.0, Z=0.0;
+
+printf ("16 - Ler e subtrair dois valores:");
+printf ("nos dê o primeiro numero:");
+scanf ("%f", &X);
+getchar();
+printf ("nos de o segundo numero:");
+scanf ("%f", &Y);
+Z = X - Y;
+printf (" A diferença entre os dois é de = %f", Z);
+printf ("Pressione <ENTER> parafinalizar o programa");
+getchar();
+}
+
+void seventeen (void){
+
+bool X=false, Y=false, Z=false;
+
+printf (" 17 - Operar Valores Logicos");
+X = true;
+Y = false;
+Z = X || Y; 
+printf ("\n A disjunção entre verdadeiro e falso = %d, Z");
+Z= X && Y;
+printf ("\n A conjunção entre verdadeiro e falso = %d, Z");
+printf ("\n Pressione <ENTER> para finalizar.");
+getchar();
+}
+
+void eighteen (void){
+
+double D = 0.0, //D = DISTANCIA
+       T = 0.0, //T = TEMPO
+       V = 0.0; //V = VELOCIDADE
+
+printf (" 18 - Calcular a velocidade de um veiculo");
+printf ("\n Fornecer uma distancia qualquer em METROS: ");
+scanf ("lf", &D);
+getchar();
+printf ("\n Fornecer o tempo para percorre-la em segundos: ");
+scanf ("lf", &T);
+getchar();
 
 }
 int main (int argc, char* argv [ ]) {
@@ -168,22 +252,27 @@ do
 {
 
 
-    printf("\n%s\n", "Opcoes:");
-    printf("\n%s","0 - Terminar");
-    printf("\n%s","1 - Metodo 01");
-    printf("\n%s","2 - Metodo 02");
-    printf("\n%s","3 - Metodo 03");
-    printf("\n%s","4 - Metodo 04");
-    printf("\n%s","5 - Metodo 05");
-    printf("\n%s","6 - Metodo 06");
-    printf("\n%s","7 - Metodo 07");
-    printf("\n%s","8 - Metodo 08");
-    printf("\n%s","9 - Metodo 09");
-    printf("\n%s","10 - Metodo 10");
-    printf("\n%s","11 - Metodo 11");
-    printf("\n%s", "12 - Metodo 12");
-    printf ("\n%s", "13 - Metodo 13");
-    printf("\n");
+    printf ("\n%s\n", "Opcoes:");
+    printf ("\n%s","0 - Terminar");
+    printf ("\n%s","1 - Metodo 01");
+    printf ("\n%s","2 - Metodo 02");
+    printf ("\n%s","3 - Metodo 03");
+    printf ("\n%s","4 - Metodo 04");
+    printf ("\n%s","5 - Metodo 05");
+    printf ("\n%s","6 - Metodo 06");
+    printf ("\n%s","7 - Metodo 07");
+    printf ("\n%s","8 - Metodo 08");
+    printf ("\n%s","9 - Metodo 09");
+    printf ("\n%s","10 - Metodo 10");
+    printf ("\n%s","11 - Metodo 11");
+    printf ("\n%s","12 - Metodo 12");
+    printf ("\n%s","13 - Metodo 13");
+    printf ("\n%s","14 - Metodo 14");
+    printf ("\n%s","15 - Metodo 15");
+    printf ("\n%s","16 - Metodo 16");
+    printf("\n%s", "17 - Metodo 17");
+    printf ("\n%s","18 - Metodo 18");
+    printf ("\n");
 
     //ler opcoes do teclado
     printf("\n%s","opcao = "); 
@@ -237,6 +326,22 @@ do
         case 13:
         thirteen();
         break;
+        case 14:
+        fourteen();
+        break;
+        case 15:
+        fifiteen();
+        break;
+        case 16:
+        sixteen();
+        break;
+        case 17:
+        seventeen();
+        break;
+        case 18:
+        eighteen();
+        break;
+
 
     
         default: // comportamento padrão
