@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#define PI 3.14 // definicao de macro (nome para substituir valor)
+#include <string.h>
+#include <math.h>
+#define PI 3.1415 // definicao de macro (nome para substituir valor)
 
 void one (void)
 {
@@ -66,21 +68,19 @@ void six (void){
 }
 
 void seven (void)
-{// definicao de constante
-const float LOCAL_PI = 3.14; // com nome e tipo (melhor)
+{
+
     printf ( " 7 - PRIMEIRO EXEMPLO EM C" );
     printf ( "\nMATRICULA: ______ ALUNO : __________________" );
     printf ( "\nEXEMPLOS DE VALORES : " );
     printf ( "\nCARACTERE : %c", 'A' ); // letra ou simbolo
     printf ( "\nINTEIRO : %d", 10 ); // valor sem parte fracionaria
-    printf ( "\nREAL : %f" , LOCAL_PI ); // constante real
+    printf ( "\nREAL : %f" , PI ); // constante real
     printf ( "\nPRESSIONAR <Enter> PARA TERMINAR." );
     getchar( ); // para esperar
 }
-void eight (void)
-{
-    // definicao de constante
-const float LOCAL_PI = 3.14; // com nome e tipo (melhor)
+void eight (void){
+
 // definicao de variavel real
 float X = 10.01; // com atribuicao de valor inicial
     printf ( " 8 - PRIMEIRO EXEMPLO EM C" );
@@ -88,14 +88,13 @@ float X = 10.01; // com atribuicao de valor inicial
     printf ( "\nEXEMPLOS DE VALORES : " );
     printf ( "\nCARACTERE : %c", 'A' ); // letra ou simbolo
     printf ( "\nINTEIRO : %d", 10 ); // valor sem parte fracionaria
-    printf ( "\nREAL : %f", LOCAL_PI ); // constante real
+    printf ( "\nREAL : %f", PI ); // constante real
     printf ( "\nREAL : %f", X ); // variavel real
     printf ( "\nPRESSIONAR <Enter> PARA TERMINAR." );
 }
 
 void nine (void){
 
-    const float LOCAL_PI = 3.14;
     float X = 10.01;
     int I = 10;
     printf ( " 9 - PRIMEIRO EXEMPLO EM C" );
@@ -103,14 +102,13 @@ void nine (void){
     printf ( "\nEXEMPLOS DE VALORES : " );
     printf ("\nINTEIRO : %i", I );
     printf ("\nREAL : %f", X );
-    printf ("\nReal : %f", LOCAL_PI);
+    printf ("\nReal : %f", PI);
     printf ("\n PRESSIONAR <ENTER> PARA TERMINAR.");
     getchar( );
     }
 
 void ten (void)
 {
-    const double LOCAL_PI = 3.14;
     float X = 10.01;
     int I = 10;
     char* N = "\n";
@@ -119,7 +117,7 @@ void ten (void)
     printf ("%c%s",    N,  "Exemplos de valores:");
     printf ("%c%s%i",  I,  "INTEIRO: ", I);
     printf ("%c%s%f",  N,  "REAL  :", X);
-    printf ("%c%s%lf", N,  "REAL :", LOCAL_PI);
+    printf ("%c%s%lf", N,  "REAL :", PI);
     printf ("PRESSIONE <ENTER> PARA TERMINAR");
     getchar();
 }
@@ -239,6 +237,74 @@ scanf ("lf", &T);
 getchar();
 
 }
+
+void nineteen (void){
+
+const char SENHA[5] = "XXXX";
+char S [10];
+
+printf(" 19 - Comparar caracteres com uma senha");
+printf ("\nFornecer uma cadeia de caracteres qualquer:");
+scanf ("%s", S); //OBS: NAO USAR & PARA VETORES/CHAR
+getchar();
+printf ("\nA comparaçao com a senha = %d", (strcmp(S,SENHA)==0)?1:0);
+/// strcmp = comparação de strings (S1, S2)
+// igual a 0 se S1 = S2 => retorna 1, senão retorna 0
+printf ("\nPressione <ENTER> para finalizar.");
+getchar();
+
+}
+
+void twenty (void){
+
+double ARCO  = 0.0,
+       COSSENO = 0.0,
+       SENO = 0.0,
+       TANGENTE = 0.0;
+
+       printf (" 20 - Calcular o Arco Trigonometrico de um SENO");
+       printf("\nFornecer valor de SENO");
+       scanf("%lf", &SENO);
+       getchar();
+       COSSENO = sqrt( 1.0 - pow(SENO,2));
+       TANGENTE = SENO / COSSENO;
+       ARCO     = atan(TANGENTE);
+       printf("\n O Arco trigonometrico em graus = %lf", (ARCO*180.0/PI));
+       printf("\nPressionar <Enter> Para Terminar.");
+       getchar();
+
+
+}
+
+void twentyone (void){
+
+int X = 0;
+
+printf (" 21 - ler e ver se um numero é igual a zero");
+printf ("\nme de um valor qualquer:");
+scanf ("%d", &X);
+getchar();
+if (X==0){
+printf("\nO valor fornecido é igual a 0");
+}else{
+printf("\nO valor fornecido não é igual a 0");
+printf("\nPressione <ENTER> para finalizar."); 
+getchar();
+}
+}
+
+void twentytwo (void){
+
+
+
+}
+
+void twentythree (void){
+
+
+
+}
+
 int main (int argc, char* argv [ ]) {
 
 int opcao = 0;
