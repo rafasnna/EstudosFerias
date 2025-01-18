@@ -295,14 +295,206 @@ getchar();
 
 void twentytwo (void){
 
+float X= 0.0;
 
+    printf ("\n 22 - Ler e testar um valor real");
+    printf ("\nFornecer um valor real diferente de zero");
+    scanf("%f", &X);
+    getchar();
+    if (X != 0.0){
+        printf ("\nO Valor digitado foi diferente de zero");
+        printf ("PRESSIONE <Enter> para finalizar");
+        getchar();
+
+    }
 
 }
 
 void twentythree (void){
 
+char X= '0';
 
+    printf ("23 - Ler e testar um caractere");
+    printf ("\nFornecer um algarismo qualquer: ");
+    scanf("%c", &X);
+    getchar();
+    if(X>='0' && X<= '9'){
 
+        printf("\n O valor digitado foi um algarismo");
+        printf("\nO algarismo digitado foi: %c", X);
+    }// if algarismo
+    printf("\nPressione <ENTER>para finalizar.");
+    }
+
+void twentyfour (void){
+
+char X='0';
+
+    printf (" 24 - Ler e testar caractere");
+    printf("\nFornecer um caractere qualquer");
+    scanf ("%c", &X);
+if (!(X >='0' && X <= '9')){
+
+    printf ("\nNao foi digitado um algorismo");
+    print ("\nFoi digitado o caractere: %c", X);
+}// if Nao algarismo
+    printf("\n Pressionar <ENTER> para terminar");
+    getchar();
+}
+
+void twentyfive(void){
+
+int X=0, Y=0;
+
+    printf (" 25 - Ler e testar dois valores inteiros");
+    printf("\nFornecer um valor inteiro qualquer: ");
+    scanf("%d", &X);
+    getchar();
+
+    printf("\nFornecer um valor inteiro qualquer: ");
+    scanf("%d", &Y);
+    getchar();
+
+if (X == Y){
+    printf("\nDois valores iguais");
+}else{
+    printf("\n%d", X);
+    printf("Diferente de");
+    printf("%d", &Y);
+}
+    printf ("\nPressionar <ENTER> para finalizar.");
+    getchar();
+}
+
+void twentysix (void){
+
+double X=0.0, Y=0.0;
+
+    printf(" 26 - Ler e testar dois valores reais");
+
+    printf("\nFornecer valor real qualquer: ");
+    scanf ("%lf", &X);
+    getchar();
+
+    printf("\nFornecer outro valor real qualquer: ");
+    scanf ("%lf", &Y);
+    getchar();
+if(!(X == Y)){
+
+    printf("\n%lf", X);
+    printf("Difente de");
+    print ("%lf", Y);
+}else{
+    printf("Valores Iguais");
+}
+printf("\nPressione <ENTER> para finalizar.");
+getchar();
+}
+
+void twentyseven (void){
+
+int X=0, Y=0;
+bool Z=false;
+
+    printf (" 27 - Tratar valores logicos");
+    printf("\nFornecer um valor inteiro qualquer: ");
+    scanf("%d", &X);
+    getchar();
+
+    printf("\nFornecer outro valor inteiro qualquer:");
+    scanf ("%d",&Y);
+    getchar();
+    Z = (X==Y);
+if(Z){
+    printf("Valores iguais");
+}else{
+    printf("Valores diferentes");
+    }
+    printf("\nPressione <ENTER> para finalizar");
+    getchar();
+
+}
+
+void twentyeight (void){
+
+char X='0';
+
+    printf(" 28 - Ler e testar uma letra");
+    printf("\nFornecer uma letra qualquer: ");
+    scanf("%c", &X);
+    getchar();
+if(X >='A' && X <= 'Z'){
+    printf("Foi digitada uma letra MAIUSCULA");
+}else{
+    if(X >= 'a' && X <= 'z'){
+        printf("Foi digitada uma letra MINUSCULA");
+    }else{
+        printf("Nao foi digitada uma letra");
+    }
+}
+printf ("\nPressionar <ENTER> para terminar.");
+getchar();
+
+}
+
+void twentynine (void){
+
+char X='0';
+
+    printf(" 29 - Comparar caracteres <,=,>");
+    printf("\nFornecer um dos caracteres citados: ");
+    scanf("%c", &X);
+    getchar();
+    switch(X){
+
+        case '>':printf ("Foi digitado o sinal de maior");
+        break;
+        case '=': printf ("Foi digitado o sinal de igual");
+        break;
+        case '<':printf("Foi digitado o sinal de menor");
+        break;
+        default: printf("Foi digitado um outro caractere qualquer");   
+    }
+    printf("\nPressione <ENTER> para finalizar.");
+    getchar();
+
+}
+
+void thirteen (void){
+
+char X='0';
+
+    printf(" 30 - Indentificar caracteres");
+    printf("\nFornecer um caractere qualquer: ");
+    scanf ("%c", &X);
+    getchar();
+
+switch (X){
+    case 'A':
+    case 'E':
+    case 'I':
+    case 'O':
+    case 'U': printf ("Foi digitado uma vogal");
+    break;
+
+    case '0':
+    case '1':
+    case '2':
+    case '3':
+    case '4':
+    case '5':
+    case '6':
+    case '7':
+    case '8':
+    case '9': printf("Foi digitado um algarismo");
+              printf("\nO numero correspondente = %d", (X-48));
+    break;
+
+    default:  printf("Foi digitado um outro caractere qualquer"); 
+    break;
+}
+    printf("\nPressione <ENTER> para finalizar.");
+    getchar();
 }
 
 int main (int argc, char* argv [ ]) {
@@ -338,6 +530,19 @@ do
     printf ("\n%s","16 - Metodo 16");
     printf("\n%s", "17 - Metodo 17");
     printf ("\n%s","18 - Metodo 18");
+    printf ("\n%s","19 - Metodo 19");
+    printf ("\n%s","20 - Metodo 20");
+    printf ("\n%s","21 - Metodo 21");
+    printf ("\n%s","22 - Metodo 22");
+    printf ("\n%s","23 - Metodo 23");
+    printf ("\n%s","24 - Metodo 24");
+    printf ("\n%s","25 - Metodo 25");
+    printf ("\n%s","26 - Metodo 26");
+    printf ("\n%s","27 - Metodo 27");
+    printf ("\n%s","28 - Metodo 28");
+    printf ("\n%s","29 - Metodo 29");
+    printf ("\n%s","30 - Metodo 30");
+
     printf ("\n");
 
     //ler opcoes do teclado
@@ -406,6 +611,42 @@ do
         break;
         case 18:
         eighteen();
+        break;
+        case 19:
+        nineteen();
+        break;
+        case 20:
+        twenty();
+        break;
+        case 21:
+        twentyone();
+        break;
+        case 22:
+        twentytwo();
+        break;
+        case 23:
+        twentythree();
+        break;
+        case 24:
+        twentyfour();
+        break;
+        case 25:
+        twentyfive();
+        break;
+        case 26:
+        twentysix();
+        break;
+        case 27:
+        twentyseven();
+        break;
+        case 28:
+        twentyeight();
+        break;
+        case 29:
+        twentynine();
+        break;
+        case 30:
+        thirteen();
         break;
 
 
