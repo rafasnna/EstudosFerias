@@ -497,6 +497,22 @@ switch (X){
     getchar();
 }
 
+void thirteenone (void){
+
+int X =0, contador =0;
+
+while (contador <= 3){
+    printf("\n");
+    printf("%d. Fornecer um valor inteiro: ", contador);
+    scanf("%d", &X);
+    getchar();
+    printf("\nO valor digitado foi: %d\n", X);
+    contador = contador + 1;
+    }
+    printf ("\nPressionar <ENTER> para terminar.");
+    getchar();
+}
+
 int main (int argc, char* argv [ ]) {
 
 int opcao = 0;
@@ -542,6 +558,7 @@ do
     printf ("\n%s","28 - Metodo 28");
     printf ("\n%s","29 - Metodo 29");
     printf ("\n%s","30 - Metodo 30");
+    printf ("\n%s","31 - Metodo 31");
 
     printf ("\n");
 
@@ -648,7 +665,9 @@ do
         case 30:
         thirteen();
         break;
-
+        case 31:
+        thirteenone();
+        break;
 
     
         default: // comportamento padrão
