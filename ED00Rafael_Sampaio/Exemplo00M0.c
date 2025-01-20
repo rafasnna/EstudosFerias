@@ -513,6 +513,30 @@ while (contador <= 3){
     getchar();
 }
 
+void thirteentwo (void){
+
+int X =0, N =0, contador =0;
+
+    printf (" 32 - ler e imprimir (N) valores inteiros");
+    printf ("\nFornecer o numero de vezes(N): ");
+    scanf("%d", &N);
+    getchar();
+
+    contador = 1;
+while (contador <= N){
+
+    printf ("\n%d", contador);
+    printf ("fornecer um valor inteiro qualquer: ");
+    scanf("%d", &X);
+    getchar();
+    printf ("\nO Valor digitado foi: %d\n", X);
+    contador = contador + 1;
+}
+printf ("\nPressione <ENTER> para continuar");
+getchar();
+}
+
+
 int main (int argc, char* argv [ ]) {
 
 int opcao = 0;
@@ -559,6 +583,7 @@ do
     printf ("\n%s","29 - Metodo 29");
     printf ("\n%s","30 - Metodo 30");
     printf ("\n%s","31 - Metodo 31");
+    printf ("\n%s","32 - Metodo 32");
 
     printf ("\n");
 
@@ -668,7 +693,9 @@ do
         case 31:
         thirteenone();
         break;
-
+        case 32:
+        thirteentwo();
+        break;
     
         default: // comportamento padrão
         printf("\n Erro: Opcao invalida.\n");
