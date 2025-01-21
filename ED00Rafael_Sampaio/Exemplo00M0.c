@@ -336,7 +336,7 @@ char X='0';
 if (!(X >='0' && X <= '9')){
 
     printf ("\nNao foi digitado um algorismo");
-    print ("\nFoi digitado o caractere: %c", X);
+    printf ("\nFoi digitado o caractere: %c", X);
 }// if Nao algarismo
     printf("\n Pressionar <ENTER> para terminar");
     getchar();
@@ -383,7 +383,7 @@ if(!(X == Y)){
 
     printf("\n%lf", X);
     printf("Difente de");
-    print ("%lf", Y);
+    printf ("%lf", Y);
 }else{
     printf("Valores Iguais");
 }
@@ -460,7 +460,7 @@ char X='0';
 
 }
 
-void thirteen (void){
+void thirty (void){
 
 char X='0';
 
@@ -497,7 +497,7 @@ switch (X){
     getchar();
 }
 
-void thirteenone (void){
+void thirtyone (void){
 
 int X =0, contador =0;
 
@@ -513,7 +513,7 @@ while (contador <= 3){
     getchar();
 }
 
-void thirteentwo (void){
+void thirtytwo (void){
 
 int X =0, N =0, contador =0;
 
@@ -534,6 +534,229 @@ while (contador <= N){
 }
 printf ("\nPressione <ENTER> para continuar");
 getchar();
+}
+
+void thirytree (void){
+
+int X=0, N=0;
+
+    printf(" 33 - Ler e imprimir (N) valores inteiros\n");
+    printf("\nFornecer o numero de vezes (N): ");
+    scanf ("%d", &N);
+    getchar();
+while ( N > 0){
+    printf ("\n%d", N);
+    printf ("Fornecer um valor inteiro qualquer: ");
+    scanf ("%d", &X);
+    getchar();
+    printf("\nO Valor digitado foi: %d\n", X);
+    N = N - 1;
+}
+    printf ("\nPressionar <ENTER> para terminar");
+    getchar();
+}
+
+void thirtyfour (void){
+
+int X = 0, contador = 0;
+
+    printf (" 34 - Ler e Imprimir 3 valores inteiros");
+for (contador = 1; contador <=3; contador = contador + 1){
+
+    printf ("\nNos de um valores inteiro: ", contador);
+    scanf("%d", &X);
+    getchar();
+    printf ("\nO valor digitado foi: %d\n", X);
+}
+printf("\nPressione <ENTER> para finalizar");
+getchar();
+
+}
+
+void thirtyfive (void){
+
+int X = 0, N = 0, contador = 0;
+
+    printf(" 35 - Ler e imprimir (N) valores inteiros\n");
+    printf("\nFornecer o numero de vezes(N): ");
+    scanf ("%d", &N);
+    getchar();
+for (contador = 1; contador <= N; contador++){
+
+    printf("\n%d. fornecer um valor inteiro: ", contador);
+    scanf ("%d", &X);
+    getchar();
+    printf("\nO valor digitado foi: %d", X);
+}
+    printf("\nPressione <ENTER> para terminar.");
+    getchar();
+}
+
+void thirtysix (void){
+
+int X =0, contador =0;
+
+    printf (" 36 - Ler e imprimir 03 valores inteiros\n");
+    contador= 1;
+do{
+    printf ("\n%d. Fornecer um valor inteiro: ", contador);
+    scanf ("%d", &X);
+    getchar();
+    printf ("\nO valor digitado foi: %d\n", X);
+}
+while (contador <=3);
+    printf("\nPressione <ENTER> para finalizar.");
+    getchar();
+}
+
+void thirtyseven (void){
+
+int X =0, contador= 0;
+
+    printf (" 37 - Ler e imprimir (N) valores inteiros\n");
+    printf ("\n Fornecer o numero de vezes (N): ");
+    scanf ("%d", contador);
+    getchar();
+do{
+
+    printf ("\n%d. fornecer um valor inteiro: ", contador);
+    scanf ("%d", &X);
+    getchar();
+    printf ("\nO valor digitado foi: %d\n", X);
+    contador = contador - 1;
+
+}
+while (contador > 0);
+    printf ("\nPressione <ENTER> para finalizar.");
+    getchar();
+}
+
+void thirtyeight (void){
+
+int X = 0;
+
+    printf (" 38 - Ler e imprimir inteiro nao nulos\n");
+    printf ("\nFornecer um valor inteiro (0 = PARAR): ");
+    scanf ("%d", &X);
+    getchar();
+while (X != 0){
+    printf("\nO valor digitado foi: %d\n", X);
+    printf("\nDigite um valor inteiro qualquer: ");
+    scanf ("%d", &X);
+    getchar();
+}
+    printf("\nPressione <ENTER> para finalizar.");
+    getchar();
+}
+
+void thirtynine (void){
+
+int X = 0;
+
+    printf(" 39 - Para ler um inteiro nao nulo\n");
+    printf ("\nForneer um valor diferente de zero: ");
+    scanf ("%d", &X);
+    getchar();
+while (X == 0){
+    printf ("\nFornecer um valor diferente de zero: ");
+    scanf ("%d", &X);
+    getchar();
+}
+    printf ("\nDigitado um numero diferente de zero\n");
+
+    printf ("\nPressione <ENTER> para finalizar.");
+    getchar();
+}
+
+void fourty (void){
+
+int X = 0;
+
+    printf(" 40 - Ler um inteiro nao nulo");
+do{
+    printf("\nDigite um numero diferente de zero: ");
+    scanf("%d", &X);
+    getchar();
+}
+while (X == 0);
+    printf("\n DIGITADO UM NUMERO DIFERENTE DE ZERO\n");
+
+    printf ("\nPressione <ENTER> para finalizar.");
+    getchar();
+
+}
+
+void P1 (void){
+
+    printf("\n");
+    printf("\nchamado o procedimento P1 sem paramentros");
+    printf("\n");
+
+}
+
+void fourtyone(void){
+
+    printf(" 41 - chamada a um  procedimento");
+    P1();
+
+    printf ("\n");
+    printf ("\nPressionar <ENTER> para terminar.");
+    getchar();
+
+}
+
+void fourtytwo (void){
+
+
+
+}
+
+void fourtytree (void){
+
+
+
+}
+
+void fourtyfour (void){
+
+
+
+}
+
+void fourtyfive (void){
+
+
+
+}
+
+void fourtysix (void){
+
+
+
+}
+
+void fourtyseven (void){
+
+
+
+}
+
+void fourtyeight (void){
+
+
+
+}
+
+void fourtynine (void){
+
+
+
+}
+
+void fifity (void){
+
+
+
 }
 
 
@@ -688,13 +911,13 @@ do
         twentynine();
         break;
         case 30:
-        thirteen();
+        thirty();
         break;
         case 31:
-        thirteenone();
+        thirtyone();
         break;
         case 32:
-        thirteentwo();
+        thirtytwo();
         break;
     
         default: // comportamento padrão
