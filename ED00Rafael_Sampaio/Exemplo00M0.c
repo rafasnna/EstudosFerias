@@ -3,7 +3,13 @@
 #include <stdbool.h>
 #include <string.h>
 #include <math.h>
+#include "my_lib.h"
+#include "my_string.h"
 #define PI 3.1415 // definicao de macro (nome para substituir valor)
+
+
+
+int X =0;
 
 void one (void)
 {
@@ -127,7 +133,7 @@ void eleven(void){
 int X = 0;
 printf(" 11 - Ler e imprimir um valor inteiro\n");
 printf("Me dê um valor inteiro qualquer:");
-scanf("%d, &X");
+scanf("%d", &X);
 getchar();
 
 printf("O valor que me passou é: %d", X);
@@ -137,7 +143,7 @@ getchar();
 }
 void twelve(void){
 //Programa para ler e imprimir um valor real
-int X = 0.0;
+float X = 0.0;
 
 printf(" 12 - Ler e imprimir um valor real\n");
 printf("Me dê um valor real qualquer:");  
@@ -183,7 +189,7 @@ printf ("Forneca um valor inteiro qualquer:");
 scanf("%d", &X);
 getchar();
 printf ("Forneca agora outro valor inteiro:");
-scanf("%d", Y);
+scanf("%d", &Y);
 getchar();
 Z = X + Y;
 printf ("A soma dos valores fornecidos é = %d", Z);
@@ -215,9 +221,9 @@ printf (" 17 - Operar Valores Logicos");
 X = true;
 Y = false;
 Z = X || Y; 
-printf ("\n A disjunção entre verdadeiro e falso = %d, Z");
+printf ("\n A disjunção entre verdadeiro e falso = %d", Z);
 Z= X && Y;
-printf ("\n A conjunção entre verdadeiro e falso = %d, Z");
+printf ("\n A conjunção entre verdadeiro e falso = %d", Z);
 printf ("\n Pressione <ENTER> para finalizar.");
 getchar();
 }
@@ -230,10 +236,10 @@ double D = 0.0, //D = DISTANCIA
 
 printf (" 18 - Calcular a velocidade de um veiculo");
 printf ("\n Fornecer uma distancia qualquer em METROS: ");
-scanf ("lf", &D);
+scanf ("%lf", &D);
 getchar();
 printf ("\n Fornecer o tempo para percorre-la em segundos: ");
-scanf ("lf", &T);
+scanf ("%lf", &T);
 getchar();
 
 }
@@ -536,7 +542,7 @@ printf ("\nPressione <ENTER> para continuar");
 getchar();
 }
 
-void thirytree (void){
+void thirtythree (void){
 
 int X=0, N=0;
 
@@ -615,7 +621,7 @@ int X =0, contador= 0;
 
     printf (" 37 - Ler e imprimir (N) valores inteiros\n");
     printf ("\n Fornecer o numero de vezes (N): ");
-    scanf ("%d", contador);
+    scanf ("%d", &contador);
     getchar();
 do{
 
@@ -686,18 +692,11 @@ while (X == 0);
 
 }
 
-void P1 (void){
-
-    printf("\n");
-    printf("\nchamado o procedimento P1 sem paramentros");
-    printf("\n");
-
-}
 
 void fourtyone(void){
 
-    printf(" 41 - chamada a um  procedimento");
-    P1();
+    printf(" 41 - chamada a um procedimento");
+
 
     printf ("\n");
     printf ("\nPressionar <ENTER> para terminar.");
@@ -706,58 +705,105 @@ void fourtyone(void){
 }
 
 void fourtytwo (void){
+ 
+
+    printf(" 42 - chamada com variavel global\n");
+for (X = 1; X <= 5; X = X + 1)
 
 
+    printf ("\n");
+    printf("\nPressione <ENTER> para finalizar.");
+    getchar();
 
 }
 
 void fourtytree (void){
 
+    printf (" 43 - Chamada/Retorno de variavel global");
 
+X = 0;
 
+    printf("\n");
+    printf("\nPressionar <enter> para finalizar.");
+    getchar();
 }
 
 void fourtyfour (void){
 
+    printf (" 44 - Chamada/retorno com parametro:\n");
 
+
+    printf ("\n");
+    printf("\nPressione <ENTER> para finalizar.");
+    getchar();
 
 }
 
 void fourtyfive (void){
 
+    printf(" 45 - Chamada / retorno com parametro\n");
 
+
+    printf("\n");
+    printf("\npressione <ENTER> para finalizar.");
+    getchar();
 
 }
 
 void fourtysix (void){
 
+    printf(" 46 - Chamada/ retorno com parametro\n\n");
 
+
+    printf ("\n");
+    printf ("\nPressione <enter> para finalizar");
+    getchar();
 
 }
 
 void fourtyseven (void){
 
+int X;
+
+    printf(" 47 - Chamada/Retorno com referencia\n");
+    X =0;
 
 
+    printf("\n");
+    printf("\nPressionar <ENTER> para terminar.");
+    getchar();
 }
 
 void fourtyeight (void){
 
+    printf (" 48 - Multiplas chamadas / retornos\n\n");
 
+    printf("\nPressionar <ENTER> para terminar.");
+    getchar();
 
 }
 
 void fourtynine (void){
 
+    printf (" 49 - Uso de modulos");
 
+    pause("Pressionar <ENTER> para finalizar");
 
 }
 
 void fifity (void){
 
+char* text = "Mudar de linha";
 
+    printf (" 50 - Uso de modulos\n");
+
+    printf ("%c", EOL);
+    printf ("%s%c", text, EOL);
+
+    pause ("PRESSIONAR <ENTER> PARA FINALIZAR");
 
 }
+
 
 
 int main (int argc, char* argv [ ]) {
@@ -807,6 +853,24 @@ do
     printf ("\n%s","30 - Metodo 30");
     printf ("\n%s","31 - Metodo 31");
     printf ("\n%s","32 - Metodo 32");
+    printf ("\n%s","33 - Metodo 33");
+    printf ("\n%s","34 - Metodo 34");
+    printf ("\n%s","35 - Metodo 35");
+    printf ("\n%s","36 - Metodo 36");
+    printf ("\n%s","37 - Metodo 37");
+    printf ("\n%s","38 - Metodo 38");
+    printf ("\n%s","39 - Metodo 39");
+    printf ("\n%s","40 - Metodo 40");
+    printf ("\n%s","41 - Metodo 41");
+    printf ("\n%s","42 - Metodo 42");
+    printf ("\n%s","43 - Metodo 43");
+    printf ("\n%s","44 - Metodo 44");
+    printf ("\n%s","45 - Metodo 45");
+    printf ("\n%s","46 - Metodo 46");
+    printf ("\n%s","47 - Metodo 47");
+    printf ("\n%s","48 - Metodo 48");
+    printf ("\n%s","49 - Metodo 49");
+    printf ("\n%s","50 - Metodo 50");
 
     printf ("\n");
 
@@ -919,7 +983,60 @@ do
         case 32:
         thirtytwo();
         break;
-    
+        case 33:
+        thirtythree();
+        break;
+        case 34:
+        thirtyfour();
+        break;
+        case 35:
+        thirtyfive();
+        break;
+        case 36:
+        thirtysix();
+        break;
+        case 37:
+        thirtyseven();
+        break;
+        case 38:
+        thirtyeight();
+        break;
+        case 39:
+        thirtynine();
+        break;
+        case 40:
+        fourty();
+        break;
+        case 41:
+        fourtyone();
+        break;
+        case 42:
+        fourtytwo();
+        break;
+        case 43:
+        fourtytree();
+        break;
+        case 44:
+        fourtyfour();
+        break;
+        case 45:
+        fourtyfive();
+        break;
+        case 46:
+        fourtysix();
+        break;
+        case 47:
+        fourtyseven();
+        break;
+        case 48:
+        fourtyeight();
+        break;
+        case 49:
+        fourtynine();
+        break;
+        case 50:
+        fifity();
+        break;
         default: // comportamento padrão
         printf("\n Erro: Opcao invalida.\n");
         break;
