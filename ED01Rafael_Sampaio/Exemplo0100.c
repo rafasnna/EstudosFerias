@@ -112,6 +112,34 @@ char *px = &x[0];
     getchar();
 }
 
+void ex0106 (void){
+
+int x = 0;
+int y = 0;
+int z = 0;
+int *py = &y;
+
+    printf("\n%s\n","ex0106-programa-v0.6");
+    printf("%s%d\n","x = ", x);
+    printf("%s%d\n","y = ", y);
+
+    printf("Entre com um valor inteiro: ");
+    scanf("%d",&x);
+    getchar();
+
+    printf("Entrar com outro valor inteiro: ");
+    scanf ("%i", py);
+    getchar();
+
+    z = x * y;
+
+    //mostrar valor resultante 
+    printf("%s(%i)*(%i) = (%d)\n","z = ",x, y, z);
+
+    printf("\n\nApertar <ENTER> para continuar.\n");
+    getchar();
+}
+
 
 /*@return - codigo de encerramento
   @parametro argc - quantidade de parametros na linha de comandos
