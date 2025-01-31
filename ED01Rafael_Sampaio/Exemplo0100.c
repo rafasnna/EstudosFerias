@@ -9,6 +9,7 @@ para compilar: gcc -o (nome desejado) (arquivo.c)
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
+#include <math.h>
 
 void ex0100 (void){
 
@@ -140,6 +141,120 @@ int *py = &y;
     getchar();
 }
 
+void ex0107(void){
+
+char x [80] = "abc"; // 80 é o tamanho e abc valor
+char y [80] = "def";
+char z [80];
+strcpy(z,"");
+
+    printf("\n%s\n", "ex0107");
+
+    printf("%s%s(%d)\n","x =", x, strlen(x));
+    printf("%s%s(%d)\n","y =", y, strlen(y));
+
+    printf ("Entrar com um caractere: ");
+    scanf("%s", x);
+    getchar();
+
+    printf("Entrar com outras caracteres: ");
+    scanf("%s", y);
+    getchar();
+
+    strcpy(z,x);
+    strcat(z,y);
+    printf("%s[%s]*[%s]=[%s]\n","z =",x,y,z);
+
+    strcpy( z,strcat(strdup(x),y));
+    printf("%s[%s]*[%s] = [%s]\n","z =",x,y,z);
+
+    printf("\n\nPressione <ENTER> para finalizar");
+    getchar();
+}
+
+void ex0108 (void){
+
+double x = 0.0;
+double y = 0.0;
+double z = 0.0;
+
+    printf("\n%s\n", "ex0108");
+
+    printf ("%s%lf\n","x =", x);
+    printf ("%s%lf\n","y =", y);
+
+    printf("Entrar com um valor real: ");
+    scanf("%lf", &x);
+    getchar();
+
+    printf("Entrar com outro valor real: ");
+    scanf("%lf", &y);
+    getchar();
+
+    z =pow(x,y); // elevar a base (x) 'a potencia (y)
+
+    printf("%s(%lf) elevado a (%lf) =(%lf)\n","z = ", x,y,z);
+    
+    x =pow(z, 1.0/y); //elevar a base (x) 'a potencia inversa de (y) (raiz)
+
+    printf("%s(%lf) elevado a (1/%lf) =(%lf)\n","z = ", z,y,x);
+    
+    z =sqrt(x);
+
+    printf("%sraiz(%lf) = (%lf)\n", "z = ", x,z);
+
+    printf("\nPressione <ENTER> para finalizar.");
+    getchar();
+
+}
+
+void ex0109(void){
+
+int x=0;
+double y=3.5;
+char z='A';
+bool w=false;
+
+char s[80]= "";
+
+    printf("\n%s\n","ex0109");
+
+    printf("01. %s%d\n", "x = ", x);
+    printf("02. %s%lf\n","y = ", y);
+    printf("03. %s%c\n", "z = ", z);
+
+x =(int)z;
+    printf("04. %s%d -> %c\n", "x = ",x,z);
+
+x =(int)y;
+    printf("05. %s%d -> %lf\n","x = ",x,y);
+
+x =97;
+z =(char)x;
+    printf("06. %s%c -> %d\n","z = ",z,x);
+
+x =(int) '0';
+z =(char) x;
+    printf("07. %s%c -> %d\n","z = ",z,x);
+
+x =w;
+    printf("08. %s%d -> %d\n","x = ",x,w);
+
+w =true;
+x =w;
+    printf("09. %s%d -> %d\n","x = ",x,w);
+
+x =(w==false);
+    printf("10. %s%d -> %d\n","x = ",x,w);
+
+x =!(w==false);
+    printf("11. %s%d -> %d\n","x = ",x,w);
+
+x =(w!=false);
+    printf("12. %s%d -> %d\n","x = ",x,w);
+
+
+}
 
 /*@return - codigo de encerramento
   @parametro argc - quantidade de parametros na linha de comandos
@@ -162,6 +277,9 @@ do{
     printf("\n%s","4 - 0103");
     printf("\n%s","5 - 0104");
     printf("\n%s","6 - 0105");
+    printf("\n%s","7 - 0106");
+    printf("\n%s","8 - 0107");
+    printf("\n%s","9 - 0108");
     printf("\n");
 
     printf("\n%s","Opcao = ");
@@ -190,6 +308,15 @@ do{
             break;
         case 6:
             ex0105();
+            break;
+        case 7:
+            ex0106();
+            break;
+        case 8:
+            ex0107();
+            break;
+        case 9:
+            ex0108();
             break;
 
         default: printf("\nERRO: Opcao invalida.\n");
